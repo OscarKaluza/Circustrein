@@ -50,7 +50,7 @@ namespace Circustrein.Tests
         public void Cannot_add_medium_carnivore_when_small_carnivore_is_present()
         {
             Wagon wagon = new Wagon();
-            wagon.AddAnimal(new Animal("Timo", 1, true));
+            wagon.AddAnimal(new Animal("Timo", 1, false));
             bool canAdd = wagon.CanAddAnimal(new Animal("Oscar", 3, true));
 
             Assert.False(canAdd);

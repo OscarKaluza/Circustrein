@@ -30,7 +30,7 @@ public class Wagon
         {
             foreach (var existingAnimal in animals)
             {
-                if (existingAnimal.IsCarnivore || existingAnimal.IsCarnivore)
+                if (existingAnimal.IsCarnivore || existingAnimal.IsCarnivore == false && existingAnimal.Size < animal.Size)
                 {
                     return false;
                 }
@@ -112,7 +112,10 @@ class Program
         Animal animal23 = new Animal("largeHerbivore5", 5, false);
         Animal animal24 = new Animal("largeHerbivore6", 5, false);
 
-        foreach (var animal in new Animal[] {animal1, animal2, animal3, animal4, animal5, animal6, animal7, animal8, animal9, animal10, animal11, animal12, animal13, animal14, animal15, animal16, animal17, animal18, animal19, animal20, animal21, animal22, animal23, animal24})
+
+
+
+        foreach (var animal in new Animal[] { animal1, animal2, animal3, animal4, animal5, animal6, animal7, animal8, animal9, animal10, animal11, animal12, animal13, animal14, animal15, animal16, animal17, animal18, animal19, animal20, animal21, animal22, animal23, animal24})
         {
             bool animalAdded = false;
             foreach (var wagon in wagons)
