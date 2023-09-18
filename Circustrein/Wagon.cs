@@ -54,7 +54,7 @@ namespace Circustrein
         }
 
 
-        public List<Wagon> distributeWagons(List<Animal> animals)
+        static public List<Wagon> distributeWagons(List<Animal> animals)
         {
             List<Wagon> wagons = new List<Wagon>();
 

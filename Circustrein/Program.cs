@@ -8,22 +8,32 @@ using System.Net.Http.Headers;
 
 class Program
 {
-
     static void Main()
     {
-        Wagon wagon = new Wagon();
-        List<Animal> animals = new List<Animal>();
+        List<Animal> Scenario1 = new List<Animal>();
 
-        animals.Add(new Animal("smallCarnivore1", 1, true));
-        animals.Add(new Animal("mediumHerbivore1", 3, false));
-        animals.Add(new Animal("MediumHerbivore2", 3, false));
-        animals.Add(new Animal("mediumHerbivore3", 3, false));
-        animals.Add(new Animal("largeHerbivore1", 5, false));
-        animals.Add(new Animal("largeHerbivore2", 5, false));
-        animals.Add(new Animal("LargeCarnivore", 5, true));
+        Scenario1.Add(new Animal("smallCarnivore1", 1, true));
+        Scenario1.Add(new Animal("mediumHerbivore1", 3, false));
+        Scenario1.Add(new Animal("MediumHerbivore2", 3, false));
+        Scenario1.Add(new Animal("mediumHerbivore3", 3, false));
+        Scenario1.Add(new Animal("largeHerbivore1", 5, false));
+        Scenario1.Add(new Animal("largeHerbivore2", 5, false));
+        Scenario1.Add(new Animal("LargeCarnivore", 5, true));
 
-        List<Wagon> wagons = wagon.distributeWagons(animals);
+        List<Animal> Scenario2 = new List<Animal>();
 
+        Scenario2.Add(new Animal("smallCarnivore1", 1, true));
+        Scenario2.Add(new Animal("smallHerbivore1", 1, false));
+        Scenario2.Add(new Animal("smallHerbivore2", 1, false));
+        Scenario2.Add(new Animal("smallHerbivore3", 1, false));
+        Scenario2.Add(new Animal("smallHerbivore4", 1, false));
+        Scenario2.Add(new Animal("smallHerbivore5", 1, false));
+        Scenario2.Add(new Animal("mediumHerbivore1", 3, false));
+        Scenario2.Add(new Animal("mediumHerbivore2", 3, false));
+        Scenario2.Add(new Animal("largeHerbivore1", 5, false));
+
+
+        List<Wagon> wagons = Wagon.distributeWagons(Scenario2);
 
         for (int i = 0; i < wagons.Count; i++)
         {
